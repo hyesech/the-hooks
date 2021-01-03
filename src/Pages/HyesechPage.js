@@ -1,13 +1,14 @@
 import React from "react";
+import Hyesech from "../Components/Hyesech";
 import ScrollToTop from "../Components/ScrollToTop";
 
-const AboutMePage = () => {
+const HyesechPage = () => {
   return (
     <>
       <ScrollToTop />
-      <div>어바웃미...</div>
+      <Hyesech />
     </>
   );
 };
 
-export default AboutMePage;
+export default HyesechPage;

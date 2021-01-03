@@ -18,8 +18,8 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="aboutme" onClick={toggle}>
-            About Me
+          <SidebarLink to="hyesech" onClick={toggle}>
+            HYESECH
           </SidebarLink>
           <SidebarLink to="hooks" onClick={toggle}>
             Hooks?

@@ -7,7 +7,7 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import HooksPage from "./Pages/HooksPage";
 import UseTitlePage from "./Pages/UseTitlePage";
-import AboutMePage from "./Pages/AboutMePage";
+import HyesechPage from "./Pages/HyesechPage";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/" component={HomePage} exact />
-        <Route path="/aboutme" component={AboutMePage} exact />
+        <Route path="/hyesech" component={HyesechPage} exact />
         <Route path="/hooks" component={HooksPage} exact />
         <Route path="/usetitle" component={UseTitlePage} exact />
 

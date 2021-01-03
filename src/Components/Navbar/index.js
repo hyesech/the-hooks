@@ -52,14 +52,14 @@ const Navbar = () => {
           <NavMenu>
             <NavItem>
               <NavLinks
-                to="aboutme"
+                to="hyesech"
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
                 offset={0}
               >
-                About Me
+                Hyesech
               </NavLinks>
             </NavItem>
             <NavItem>
@@ -100,7 +100,7 @@ const Navbar = () => {
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            <NavBtnLink to="hyesech">More</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

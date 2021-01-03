@@ -40,7 +40,7 @@ export const ServicesWrapper = styled.div`
 `;
 
 export const ServicesCard = styled.div`
-  background: #fff;
+  background: #000;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -62,7 +62,7 @@ export const ServicesIcon = styled.img`
   height: 160px;
   width: 160px;
   margin-bottom: 10px;
-  background-color: white;
+  background-color: #000;
 `;
 
 export const ServicesH1 = styled.h1`
