@@ -45,19 +45,19 @@ export const NavLogo = styled(LinkR)`
   text-decoration: none;
 `;
 
-export const MobileIcon = styled.div`
-  display: none;
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: e-resize;
-    color: #fff;
-  }
-`;
+// export const MobileIcon = styled.div`
+//   display: none;
+//   @media screen and (max-width: 768px) {
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     transform: translate(-100%, 60%);
+//     font-size: 1.8rem;
+//     cursor: e-resize;
+//     color: #fff;
+//   }
+// `;
 
 export const NavMenu = styled.ul`
   display: flex;
@@ -89,9 +89,6 @@ export const NavLinks = styled(LinkS)`
 export const NavBtn = styled.div`
   display: flex;
   align-items: center;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const NavBtnLink = styled(LinkR)`
@@ -100,6 +97,7 @@ export const NavBtnLink = styled(LinkR)`
   white-space: nowrap;
   padding: 10px 22px;
   color: white;
+  font-weight: bold;
   font-size: 16px;
   outline: none;
   border: none;

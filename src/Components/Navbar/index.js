@@ -12,14 +12,14 @@ import {
   NavBtn,
   NavBtnLink,
 } from "./NavbarElements";
-import Sidebar from "./Sidebar/index";
+// import Sidebar from "./Sidebar/index";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggle = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   const [scrollNav, setScrollNav] = useState(false);
   const changeNav = () => {
@@ -41,17 +41,17 @@ const Navbar = () => {
   return (
     <>
       {/* <IconContext.Provider value={{ color: "red" }}> */}
-      <Nav scrollNav={scrollNav} toggle={toggle}>
+      <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="/" onClick={toggleHome}>
             The Hooks
           </NavLogo>
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
+          {/* <MobileIcon onClick={toggle}> */}
+          {/* <FaBars />
+          </MobileIcon> */}
           <NavMenu>
             <NavItem>
-              <NavLinks
+              {/* <NavLinks
                 to="hyesech"
                 smooth={true}
                 duration={500}
@@ -96,16 +96,16 @@ const Navbar = () => {
                 offset={0}
               >
                 Sign Up
-              </NavLinks>
+              </NavLinks> */}
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="hyesech">More</NavBtnLink>
+            <NavBtnLink to="hyesech">HYESECH</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>
       {/* </IconContext.Provider> */}
-      <Sidebar isOpen={isOpen} toggle={toggle} />
+      {/* <Sidebar isOpen={isOpen} toggle={toggle} /> */}
     </>
   );
 };
