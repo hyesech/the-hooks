@@ -7,7 +7,7 @@ export const Link = styled(LinkR)`
   color: #000;
 `;
 
-export const ServicesContainer = styled.div`
+export const HookContainer = styled.div`
   height: 860px;
   display: flex;
   flex-direction: column;
@@ -22,11 +22,11 @@ export const ServicesContainer = styled.div`
   }
 `;
 
-export const ServicesWrapper = styled.div`
+export const HookWrapper = styled.div`
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
   padding: 0 50px;
@@ -39,10 +39,9 @@ export const ServicesWrapper = styled.div`
   }
 `;
 
-export const ServicesCard = styled.div`
+export const HookCard = styled.div`
   background: #000;
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
@@ -58,14 +57,14 @@ export const ServicesCard = styled.div`
   }
 `;
 
-export const ServicesIcon = styled.img`
-  height: 160px;
-  width: 160px;
+export const HookIcon = styled.img`
+  height: 200px;
+  width: 200px;
   margin-bottom: 10px;
-  background-color: #000;
+  color: ${({ fill }) => (fill ? "#ff0000" : "#fff")};
 `;
 
-export const ServicesH1 = styled.h1`
+export const HookH1 = styled.h1`
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 64px;
@@ -75,14 +74,26 @@ export const ServicesH1 = styled.h1`
   }
 `;
 
-export const ServicesH2 = styled.h2`
-  font-size: 1rem;
-  margin-bottom: 10px;
-  background-color: white;
+export const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 `;
 
-export const ServicesP = styled.p`
-  font-size: 1rem;
-  text-align: center;
-  background-color: white;
+export const HookH2 = styled.h2`
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background-color: #000;
+  color: #fff;
+`;
+
+export const HookP = styled.p`
+  display: none;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    text-align: left;
+    background-color: #000;
+    color: #fff;
+  }
 `;

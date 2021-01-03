@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Number01 from "../../Images/number01.svg";
 import Number02 from "../../Images/number02.svg";
 import Number03 from "../../Images/number03.svg";
@@ -11,47 +11,57 @@ import Number03 from "../../Images/number03.svg";
 
 import {
   Link,
-  ServicesContainer,
-  ServicesH1,
-  ServicesWrapper,
-  ServicesCard,
-  ServicesIcon,
-  ServicesH2,
-  ServicesP,
+  HookContainer,
+  HookH1,
+  HookWrapper,
+  HookCard,
+  HookIcon,
+  Text,
+  HookH2,
+  HookP,
 } from "./HooksListElements";
 
 const HooksList = () => {
+  const [numberColorIsRed, setNumberColorisRed] = useState(false);
+
+  const changeNumberColor = () => {
+    setNumberColorisRed(!numberColorIsRed);
+    console.log(numberColorIsRed);
+  };
+
   return (
-    <ServicesContainer id="hooklist">
-      <ServicesH1>Hook List</ServicesH1>
-      <ServicesWrapper>
+    <HookContainer id="hooklist">
+      <HookH1>Hook List</HookH1>
+      <HookWrapper>
         <Link to="/usetitle">
-          <ServicesCard>
-            <ServicesIcon src={Number01} />
-            <ServicesH2>useTitle</ServicesH2>
-            <ServicesP>Let's change our title.</ServicesP>
-          </ServicesCard>
+          <HookCard>
+            <HookIcon src={Number01} onMouseOver={changeNumberColor} />
+            <Text>
+              <HookH2>useTitle</HookH2>
+              <HookP>Let's change our title.</HookP>
+            </Text>
+          </HookCard>
         </Link>
-        <Link to="/usetitle">
-          <ServicesCard>
-            <ServicesIcon src={Number02} />
-            <ServicesH2>Virtual Offices</ServicesH2>
-            <ServicesP>
+        <Link to="/useclick">
+          <HookCard>
+            <HookIcon src={Number02} />
+            <HookH2>useClick</HookH2>
+            <HookP>
               We can access our platform online anywhere in the world.
-            </ServicesP>
-          </ServicesCard>
+            </HookP>
+          </HookCard>
         </Link>
         <Link to="/usetitle">
-          <ServicesCard>
-            <ServicesIcon src={Number03} />
-            <ServicesH2>Premium Benefits</ServicesH2>
-            <ServicesP>
+          <HookCard>
+            <HookIcon src={Number03} />
+            <HookH2>Premium Benefits</HookH2>
+            <HookP>
               Unlock our special membership card that returns 5% cash back.
-            </ServicesP>
-          </ServicesCard>
+            </HookP>
+          </HookCard>
         </Link>
-      </ServicesWrapper>
-    </ServicesContainer>
+      </HookWrapper>
+    </HookContainer>
   );
 };
 
