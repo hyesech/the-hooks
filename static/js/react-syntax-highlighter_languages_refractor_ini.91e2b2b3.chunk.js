@@ -1,0 +1,2 @@
+(this["webpackJsonpthe-hooks"]=this["webpackJsonpthe-hooks"]||[]).push([[60],{178:function(t,s,n){"use strict";function e(t){t.languages.ini={comment:/^[ \t]*[;#].*$/m,selector:/^[ \t]*\[.*?\]/m,constant:/^[ \t]*[^\s=]+?(?=[ \t]*=)/m,"attr-value":{pattern:/=.*/,inside:{punctuation:/^[=]/}}}}t.exports=e,e.displayName="ini",e.aliases=[]}}]);
+//# sourceMappingURL=react-syntax-highlighter_languages_refractor_ini.91e2b2b3.chunk.js.map
