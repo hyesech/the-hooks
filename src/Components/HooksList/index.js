@@ -42,22 +42,22 @@ const HooksList = () => {
             </Text>
           </HookCard>
         </Link>
-        <Link to="/useclick">
+        <Link to="/">
           <HookCard>
-            <HookIcon src={Number02} />
-            <HookH2>useClick</HookH2>
-            <HookP>
-              We can access our platform online anywhere in the world.
-            </HookP>
+            <HookIcon src={Number02} onMouseOver={changeNumberColor} />
+            <Text>
+              <HookH2>useClick</HookH2>
+              <HookP>Click?</HookP>
+            </Text>
           </HookCard>
         </Link>
-        <Link to="/usetitle">
+        <Link to="/">
           <HookCard>
-            <HookIcon src={Number03} />
-            <HookH2>Premium Benefits</HookH2>
-            <HookP>
-              Unlock our special membership card that returns 5% cash back.
-            </HookP>
+            <HookIcon src={Number03} onMouseOver={changeNumberColor} />
+            <Text>
+              <HookH2>useTitle</HookH2>
+              <HookP>Title?</HookP>
+            </Text>
           </HookCard>
         </Link>
       </HookWrapper>

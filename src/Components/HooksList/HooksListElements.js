@@ -42,7 +42,7 @@ export const HookWrapper = styled.div`
 export const HookCard = styled.div`
   background: #000;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   border-radius: 10px;
   min-height: 300px;
@@ -58,9 +58,10 @@ export const HookCard = styled.div`
 `;
 
 export const HookIcon = styled.img`
-  height: 200px;
-  width: 200px;
-  margin-bottom: 10px;
+  width: 100%;
+  height: 5rem;
+  width: 5rem;
+  margin-bottom: 1rem;
   color: ${({ fill }) => (fill ? "#ff0000" : "#fff")};
 `;
 
@@ -89,7 +90,10 @@ export const HookH2 = styled.h2`
 `;
 
 export const HookP = styled.p`
-  display: none;
+  font-size: 1rem;
+  text-align: left;
+  background-color: #000;
+  color: #fff;
   @media screen and (max-width: 768px) {
     font-size: 1rem;
     text-align: left;
