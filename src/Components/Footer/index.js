@@ -42,13 +42,18 @@ const Footer = () => {
                 <FooterLink to="/">Terms of Services</FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle>Videos</FooterLinkTitle>
-                <FooterLink to="/">Submit Videos</FooterLink>
-                <FooterLink to="/">Ambassadors</FooterLink>
-                <FooterLink to="/">Agency</FooterLink>
-                <FooterLink to="/">Influencer</FooterLink>
+                <FooterLinkTitle>Hooks</FooterLinkTitle>
+                <FooterLink to="/">useTitle</FooterLink>
+                <FooterLink to="/">useClick</FooterLink>
               </FooterLinkItems>
             </FooterLinksWrapper>
+            <FooterLinkItems>
+              <FooterLinkTitle>Hooks</FooterLinkTitle>
+              <FooterLink to="/">06</FooterLink>
+              <FooterLink to="/">07</FooterLink>
+              <FooterLink to="/">08</FooterLink>
+              <FooterLink to="/">09</FooterLink>
+            </FooterLinkItems>
             <FooterLinksWrapper>
               <FooterLinkItems>
                 <FooterLinkTitle>Social Medias</FooterLinkTitle>
@@ -56,13 +61,6 @@ const Footer = () => {
                 <FooterLink to="/">Instagram</FooterLink>
                 <FooterLink to="/">Facebook</FooterLink>
                 <FooterLink to="/">Youtube</FooterLink>
-              </FooterLinkItems>
-              <FooterLinkItems>
-                <FooterLinkTitle>Contact Us</FooterLinkTitle>
-                <FooterLink to="/">Contact</FooterLink>
-                <FooterLink to="/">Support</FooterLink>
-                <FooterLink to="/">Destinations</FooterLink>
-                <FooterLink to="/">Sponsorships</FooterLink>
               </FooterLinkItems>
             </FooterLinksWrapper>
           </FooterLinksContainer>
