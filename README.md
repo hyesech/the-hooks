@@ -1,10 +1,9 @@
 # The Hooks
+Website for learning react hook.
 
-## Branches
-### main
-#### deploy branch
+### Branches
+#### dev
+main branch
 
-### dev
-#### develope main
-
-### v
+#### v1
+useClick with useEffect
