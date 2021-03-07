@@ -1,12 +1,17 @@
-export const useClick = {
+export const useRefData = {
   lightText: true,
-  topLine: "useClick",
-  headLine: "Click the buttons",
+  topLine: "useRef",
+  headLine: "useRef",
   description:
     '먼저 타이틀을 확인하세요. 그리고 "Click Me" 버튼을 클릭하세요. 그러면 이 페이지의 타이틀을 바꿀 수 있습니다.아래쪽 버튼을 누르려면 아래의 글을 모두 읽고 이해한 다음 누르세요.',
-  subTitle1: "1. Reference에 대해 알고 갑시다!",
-  paragrah1:
-    "'reference'는 기본적으로 Component의 특정 부분을 선택하는 방법입니다. 'document.getElementByID()'를 사용한 것처럼!",
+  contents: {
+    paragraph01: {
+      title: "1. Reference에 대해 알고 갑시다!",
+      text:
+        "'reference'는 기본적으로 Component의 특정 부분을 선택하는 방법입니다. 'document.getElementByID()'를 사용한 것처럼!",
+    },
+  },
+
   subTitle2: "2. useState",
   paragrah2:
     "먼저 useState를 사용해 title의 디폴트 값을 'Change Me...'로 설정합니다.",
