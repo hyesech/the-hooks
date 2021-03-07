@@ -41,19 +41,18 @@ function UseRef() {
           <SubTitle darkText={useRefData.darkText}>
             {useRefData.contents.paragraph01.title}
           </SubTitle>
-          <Paragraph>{useRefData.contents.paragraph01.text}</Paragraph>
+          <Paragraph>{useRefData.contents.paragraph01.text1}</Paragraph>
         </TextWrapper>
 
         {/* 2 */}
         <TextWrapper>
           <SubTitle darkText={useRefData.darkText}>
-            {useRefData.subTitle2}
+            {useRefData.contents.paragrah02.title}
           </SubTitle>
-          <Paragraph>{useRefData.paragrah2}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah02.text1}</Paragraph>
           <Paragraph>
             <DefaultCodeBlock
-              text={`// useState로 기본 타이틀 지정
-const [title, setTitle] = useState('Change Me...');`}
+              text={useRefData.contents.paragrah02.code1}
               showLineNumbers={false}
             />
           </Paragraph>
@@ -62,53 +61,40 @@ const [title, setTitle] = useState('Change Me...');`}
         {/* 3 */}
         <TextWrapper>
           <SubTitle darkText={useRefData.darkText}>
-            {useRefData.subTitle3}
+            {useRefData.contents.paragrah03.title}
           </SubTitle>
           <Paragraph>
             <DefaultCodeBlock
-              text={`// useEffect로 title 업데이트 시 updateTitle 함수 호출
-useEffect(updateTitle, [title]);`}
+              text={useRefData.contents.paragrah03.code1}
               showLineNumbers={false}
             />
           </Paragraph>
-          <Paragraph>{useRefData.paragrah3}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah03.text1}</Paragraph>
         </TextWrapper>
 
         {/* 4 */}
         <TextWrapper>
           <SubTitle darkText={useRefData.darkText}>
-            {useRefData.subTitle4}
+            {useRefData.contents.paragrah04.title}
           </SubTitle>
           <Paragraph>
             <DefaultCodeBlock
-              text={`const updateTitle = () => {
-        const htmlTitle = document.querySelector("title");
-        htmlTitle.innerText = title;
-};`}
+              text={useRefData.contents.paragrah04.code1}
               showLineNumbers={false}
             />
           </Paragraph>
-          <Paragraph>{useRefData.paragrah4}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah04.text1}</Paragraph>
         </TextWrapper>
 
         {/* 5 */}
         <TextWrapper>
           <SubTitle darkText={useRefData.darkText}>
-            {useRefData.subTitle5}
+            {useRefData.contents.paragrah05.title}
           </SubTitle>
-          <Paragraph>{useRefData.paragrah5}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah05.text1}</Paragraph>
           <Paragraph>
             <DefaultCodeBlock
-              text={`<Button
-      onClick={() => setTitle("Changed!!!")}
-      primary={useTitle.primary ? 1 : 0}
-      dark={useTitle.dark ? 1 : 0}
-      radius={50}
-      height={150}
-      width={150}
-      >
-      {useTitle.buttonLabel1}
-</Button>`}
+              text={useRefData.contents.paragrah05.code1}
               showLineNumbers={false}
             />
           </Paragraph>
@@ -117,84 +103,70 @@ useEffect(updateTitle, [title]);`}
         {/* 6 */}
         <TextWrapper>
           <SubTitle darkText={useRefData.darkText}>
-            {useRefData.subTitle6}
+            {useRefData.contents.paragrah06.title}
           </SubTitle>
-
-          <Paragraph>{useRefData.paragrah6}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah06.text1}</Paragraph>
           <Paragraph>
             <DefaultCodeBlock
-              text={`onClick={() => setTitle("Changed!!!")}`}
+              text={useRefData.contents.paragrah06.code1}
               showLineNumbers={false}
             />
           </Paragraph>
-          <Paragraph>{useRefData.paragrah7}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah06.text2}</Paragraph>
         </TextWrapper>
 
         {/* 7 */}
         <TextWrapper>
           <SubTitle darkText={useRefData.darkText}>
-            {useRefData.subTitle7}
+            {useRefData.contents.paragrah07.title}
           </SubTitle>
-
-          <Paragraph>{useRefData.paragrah8}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah07.text1}</Paragraph>
         </TextWrapper>
 
         {/* 8 */}
         <TextWrapper>
           <SubTitle darkText={useRefData.darkText}>
-            {useRefData.subTitle8}
+            {useRefData.contents.paragrah08.title}
           </SubTitle>
-
-          <Paragraph>{useRefData.paragrah9}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah08.text1}</Paragraph>
           <Paragraph>
             <DefaultCodeBlock
-              text={`onClick={() => setTitle("Changed!!!")}`}
+              text={useRefData.contents.paragrah08.code1}
               showLineNumbers={false}
             />
           </Paragraph>
-          <Paragraph>{useRefData.paragrah10}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah08.text2}</Paragraph>
         </TextWrapper>
 
         {/* 9 */}
         <TextWrapper>
           <SubTitle darkText={useRefData.darkText}>
-            {useRefData.subTitle9}
+            {useRefData.contents.paragrah09.title}
           </SubTitle>
-
-          <Paragraph>{useRefData.paragrah11}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah09.text1}</Paragraph>
           <Paragraph>
             <DefaultCodeBlock
-              text={`const [userTitle, setUserTitle] = useState("Read First");`}
+              text={useRefData.contents.paragrah09.code1}
               showLineNumbers={false}
             />
           </Paragraph>
-          <Paragraph>{useRefData.paragrah12}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah09.text2}</Paragraph>
         </TextWrapper>
 
         {/* 10 */}
         <TextWrapper>
           <SubTitle darkText={useRefData.darkText}>
-            {useRefData.subTitle10}
+            {useRefData.contents.paragrah10.title}
           </SubTitle>
-          <Paragraph>{useRefData.paragrah13}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah10.text1}</Paragraph>
 
           <Paragraph>
             <DefaultCodeBlock
-              text={`const handleSubmit = (e) => {
-     e.preventDefault();
-            
-          if (userTitle === "Read First") {
-                // userTitle이 바뀌지 않은 경우
-                // 경고 띄우는 함수 등
-          } else {
-                setUserTitle(userTitle);
-                setTitle(userTitle);
-          }
-};`}
+              text={useRefData.contents.paragrah10.code1}
               showLineNumbers={false}
             />
           </Paragraph>
-          <Paragraph>{useRefData.paragrah14}</Paragraph>
+          <Paragraph>{useRefData.contents.paragrah10.text2}</Paragraph>
         </TextWrapper>
       </ArticleWrapper>
 
