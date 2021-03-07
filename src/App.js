@@ -8,7 +8,7 @@ import Footer from "./Components/Footer";
 import HooksPage from "./Pages/HooksPage";
 import UseTitlePage from "./Pages/UseTitlePage";
 import HyesechPage from "./Pages/HyesechPage";
-import UseClickPage from "./Pages/UseClickPage";
+import UseRefPage from "./Pages/UseRefPage";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path="/hyesech" component={HyesechPage} exact />
         <Route path="/hooks" component={HooksPage} exact />
         <Route path="/usetitle" component={UseTitlePage} exact />
-        <Route path="/useclick" component={UseClickPage} exact />
+        <Route path="/useref" component={UseRefPage} exact />
 
         {/* <Route path="/usetitle" component={UseTitlePage} exact /> */}
         {/* <Route path="/signin" component={SigninPage} exact />

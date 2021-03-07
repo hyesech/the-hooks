@@ -1,14 +1,14 @@
 import React from "react";
-import UseClick from "../Components/HooksList/UseClick";
+import UseRef from "../Components/HooksList/UseRef";
 import ScrollToTop from "../Components/ScrollToTop";
 
-const UseClickPage = () => {
+const UseRefPage = () => {
   return (
     <>
       <ScrollToTop />
-      <UseClick />
+      <UseRef />
     </>
   );
 };
 
-export default UseClickPage;
+export default UseRefPage;
