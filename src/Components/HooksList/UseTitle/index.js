@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { FaArrowUp } from "react-icons/fa";
 import { useTitle } from "./UseTitleData";
-import { UseTitleCodeBlock } from "../../CodeBlock";
+import { DefaultCodeBlock } from "../../CodeBlock";
 import { Button } from "../../ButtonElements";
 import {
   Container,
@@ -103,7 +103,7 @@ function UseTitle() {
           <SubTitle darkText={useTitle.darkText}>{useTitle.subTitle2}</SubTitle>
           <Paragraph>{useTitle.paragrah2}</Paragraph>
           <Paragraph>
-            <UseTitleCodeBlock
+            <DefaultCodeBlock
               text={`// useState로 기본 타이틀 지정
 const [title, setTitle] = useState('Change Me...');`}
               showLineNumbers={false}
@@ -115,7 +115,7 @@ const [title, setTitle] = useState('Change Me...');`}
         <TextWrapper>
           <SubTitle darkText={useTitle.darkText}>{useTitle.subTitle3}</SubTitle>
           <Paragraph>
-            <UseTitleCodeBlock
+            <DefaultCodeBlock
               text={`// useEffect로 title 업데이트 시 updateTitle 함수 호출
 useEffect(updateTitle, [title]);`}
               showLineNumbers={false}
@@ -128,7 +128,7 @@ useEffect(updateTitle, [title]);`}
         <TextWrapper>
           <SubTitle darkText={useTitle.darkText}>{useTitle.subTitle4}</SubTitle>
           <Paragraph>
-            <UseTitleCodeBlock
+            <DefaultCodeBlock
               text={`const updateTitle = () => {
         const htmlTitle = document.querySelector("title");
         htmlTitle.innerText = title;
@@ -144,7 +144,7 @@ useEffect(updateTitle, [title]);`}
           <SubTitle darkText={useTitle.darkText}>{useTitle.subTitle5}</SubTitle>
           <Paragraph>{useTitle.paragrah5}</Paragraph>
           <Paragraph>
-            <UseTitleCodeBlock
+            <DefaultCodeBlock
               text={`<Button
       onClick={() => setTitle("Changed!!!")}
       primary={useTitle.primary ? 1 : 0}
@@ -166,7 +166,7 @@ useEffect(updateTitle, [title]);`}
 
           <Paragraph>{useTitle.paragrah6}</Paragraph>
           <Paragraph>
-            <UseTitleCodeBlock
+            <DefaultCodeBlock
               text={`onClick={() => setTitle("Changed!!!")}`}
               showLineNumbers={false}
             />
@@ -187,7 +187,7 @@ useEffect(updateTitle, [title]);`}
 
           <Paragraph>{useTitle.paragrah9}</Paragraph>
           <Paragraph>
-            <UseTitleCodeBlock
+            <DefaultCodeBlock
               text={`onClick={() => setTitle("Changed!!!")}`}
               showLineNumbers={false}
             />
@@ -201,7 +201,7 @@ useEffect(updateTitle, [title]);`}
 
           <Paragraph>{useTitle.paragrah11}</Paragraph>
           <Paragraph>
-            <UseTitleCodeBlock
+            <DefaultCodeBlock
               text={`const [userTitle, setUserTitle] = useState("Read First");`}
               showLineNumbers={false}
             />
@@ -217,7 +217,7 @@ useEffect(updateTitle, [title]);`}
           <Paragraph>{useTitle.paragrah13}</Paragraph>
 
           <Paragraph>
-            <UseTitleCodeBlock
+            <DefaultCodeBlock
               text={`const handleSubmit = (e) => {
      e.preventDefault();
             
