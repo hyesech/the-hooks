@@ -77,7 +77,11 @@ export const Paragraph = styled.p`
   margin-bottom: 35px;
   font-size: 0.9rem;
   line-height: 24px;
+  flex-wrap: wrap;
   color: ${({ darkText }) => (darkText ? "#000" : "#fff")};
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 export const BtnWrap = styled.div`
