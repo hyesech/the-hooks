@@ -105,26 +105,6 @@ export const Img = styled.img`
   padding-right: 0;
 `;
 
-export const Reference = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 450px;
-  padding: 0 24px;
-`;
-export const ReferenceWrapper = styled.div`
-  min-width: 50%;
-  max-width: 800px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media screen and (max-width: 768px) {
-    transition: all 0.5s ease-in;
-    min-width: 100%;
-  }
-`;
-
 export const InputWrapper = styled.div`
   width: 100%;
   height: 100%;
