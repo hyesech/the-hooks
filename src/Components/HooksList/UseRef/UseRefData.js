@@ -3,7 +3,7 @@ export const useRefData = {
   topLine: "useRef",
   headLine: "useRef",
   description:
-    "지금 이 페이지에서 알게 될 부분은 useRef와 useEffect의 두 번째 사용 방식입니다. 모바일 환경보다 데스크톱 환경에서 보는 것을 권장합니다.",
+    "지금 이 페이지에서 알게 될 부분은 useRef와 useEffect의 두 번째 사용 방식입니다.",
   contents: {
     paragraph01: {
       title: "1. 일단 해봅시다!",

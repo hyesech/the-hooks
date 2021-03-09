@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import Router from "react-router-dom";
 import styled from "styled-components";
 import { useRefData } from "./UseRefData";
 import { DefaultCodeBlock } from "../../CodeBlock";
@@ -74,7 +75,6 @@ const ReferenceWrapper = styled.div`
 `;
 
 function UseRef() {
-  const element = useRef();
   const target = useRef();
   const [mouseXY, setMouseXY] = useState({ x: 0, y: 0 });
   const [targetXY, setTargetXY] = useState({ x: 0, y: 0 });
@@ -85,14 +85,14 @@ function UseRef() {
 
   const setTargetPosition = () => {
     setTargetXY({
-      x: target.current.offsetLeft + 4,
-      y: target.current.offsetTop + 4,
+      x: target.current.offsetLeft + 80,
+      y: target.current.offsetTop + 30,
     });
   };
 
   useEffect(() => {
     setTargetPosition();
-  }, [targetXY]);
+  }, []);
 
   useEffect(() => {
     // 마우스를 움직일 때마다 이벤트 생성 ---> onMove 실행
@@ -102,7 +102,7 @@ function UseRef() {
     return () => {
       window.removeEventListener("mousemove", onMove);
     };
-  }, [mouseXY]);
+  }, []);
 
   return (
     <Container>
@@ -112,8 +112,8 @@ function UseRef() {
       <ArticleTitle>
         <ArticleTitleWrapper>
           <TopLine>{useRefData.topLine}</TopLine>
-          <Heading lightText={useRefData.lightText}>
-            {useRefData.headLine}
+          <Heading ref={target} lightText={useRefData.lightText}>
+            <ButtonPart foo="useRef" answer="CLEAR!!!" />
           </Heading>
           <SubTitle>{useRefData.description}</SubTitle>
         </ArticleTitleWrapper>
@@ -161,9 +161,7 @@ function UseRef() {
               showLineNumbers={false}
             />
           </Paragraph>
-          <Paragraph ref={element}>
-            {useRefData.contents.paragrah02.text2}
-          </Paragraph>
+          <Paragraph>{useRefData.contents.paragrah02.text2}</Paragraph>
           <Paragraph>
             <DefaultCodeBlock
               text={useRefData.contents.paragrah02.code2}
@@ -327,12 +325,6 @@ function UseRef() {
         <ReferenceWrapper>
           <ButtonPart foo="x" answer={targetXY.x} />
           <ButtonPart foo="y" answer={targetXY.y} />
-        </ReferenceWrapper>
-
-        <ReferenceWrapper>
-          <span ref={target}>
-            <ButtonPart foo=" " answer="useDoubleCheck" />
-          </span>
         </ReferenceWrapper>
       </Reference>
     </Container>
