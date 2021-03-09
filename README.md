@@ -1,8 +1,8 @@
 # The Hooks
 Website for learning react hook.
 
-### Branches
-#### dev
+## Branches
+### dev
 main branch
 여기로 merge된 경우 gh-pages에 배포
 현재까지 배포된 페이지는 useTitle
@@ -11,7 +11,7 @@ main branch
 - [ ] useMemo
 - [ ] useCallback
 
-#### v1
+### v1
 useRef, useEffect(componentDidUnMount)
 2021/03/07 ~ 2021/03/09
 - [x] useRef를 이용한 페이지 제작
