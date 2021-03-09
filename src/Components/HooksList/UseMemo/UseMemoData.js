@@ -10,14 +10,14 @@ export const useMemoData = {
       text1:
         "지난 번에 우리는 페이지 하단의 x와 y를 클릭해 값의 위치를 얻었습니다. x,y 값이 가리키는 좌표지점에는 useRef가 있었고, 우리는 그 문자를 클릭해 답을 찾아 이 페이지로 넘어왔습니다. 지난번 페이지는 x와 y값을 한 눈에 보기 어려워서 이번 페이지에서는 구조를 조금 바꿨습니다. 아래의 원을 보세요.",
       text2:
-        "'TARGET'이라는 글씨가 보이지요? 이번 페이지에서 우리는 x, y값을 'TARGET'이라는 이름의 빨간색 동그라미의 위치값으로 설정하려 합니다. 'TARGET'의 x, y 좌표는 오른쪽 위의 빨간 동그라미에 적혀 있습니다. 따라서 지난 번에는 마우스의 위치 값이 적혀 있어서 숫자가 계속 바뀌었는데, 이번에는 숫자가 변하지 않습니다.",
+        "이번 페이지에서 우리는 x, y값을 빨간색 동그라미 위에 적어 두려고 합니다. 지난 번에 x, y값을 적어 두었던 오른쪽 위의 붉은색 원은 'L', 'M', 'R'이라는 글자를 가진 원 3개로 바꿔 두었습니다.",
       text3:
         "'TARGET'이 움직이지 않으니 숫자도 변하지 않는 것이 당연합니다. 그러면 이제 타겟을 움직일 수 있도록 코드를 바꾸겠습니다.",
     },
     paragrah02: {
       title: "2. TARGET을 조작해봅시다",
       text1:
-        "간단한 코드를 추가해서 버튼을 만들었습니다. 위 버튼을 클릭하면 TARGET이 이동합니다. setState를 이용하면 버튼을 쉽게 만들 수 있습니다. 코드는 아래와 같습니다.",
+        "간단한 코드를 추가해서 버튼을 만들었습니다. 위 버튼을 클릭하면 TARGET이 이동합니다. 물론 오른쪽 위에 붙어있는 버튼을 클릭해도 똑같이 동작합니다. 두 버튼은 같은 버튼입니다. 또, 이 버튼은 setState를 이용하면 쉽게 만들 수 있습니다. 코드는 아래와 같습니다.",
       code1: `const [position, setPosition] = useState("center");
 
 // 왼쪽으로 보내기
@@ -46,39 +46,21 @@ useEffect(() => {
         "확인해보니 deps array가 비어 있네요. 그러면 이 useEffect는 웹 페이지 실행 시(component가 최초로 mount 되는 시점) 한 번만 setTargetPosition이라는 함수를 실행하고 두 번다시 실행하지 않습니다. 웹 페이지를 새로고침하는 경우를 제외하면요.",
     },
     paragrah04: {
-      title: "4.",
+      title: "4. 수정한 결과입니다.",
       text1:
-        "간단한 퀴즈를 내겠습니다. 지금까지 해왔던 것처럼 질문을 보고, 마음 속으로 답을 한 후 빈 칸을 눌러 생각한 답과 맞는지 확인해보세요.",
-      quiz1: {
-        qtext1: "1. useState를 true, false 값으로 설정하면",
-        blank1: "Toggle",
-        qtext2: "기능을 구현할 수 있다.",
-      },
-      quiz2: {
-        qtext1: "2. useEffect 사용 시 deps array를 빈 배열로 두면",
-        blank1: "componentDidMount",
-        qtext2: "기능을 할 수 있다.",
-      },
-      quiz3: {
-        qtext1: "3. useEffect 사용 시 deps array에 값을 할당하면",
-        blank1: "componentDidUpdate",
-        qtext2: "와 비슷한 역할을 한다고 볼 수 있다.",
-      },
-      quiz4: {
-        qtext1: "4. useRef는 기본적으로 바닐라 자바스크립트의",
-        blank1: "document.getElementById",
-        qtext2: "와 비슷한 역할을 한다고 볼 수 있다.",
-      },
-      quiz5: {
-        qtext1: "5. useEffect 내부에서 함수를 리턴하는 경우",
-        blank1: "componentWillUnMount",
-        qtext2: "기능을 구현할 수 있다.",
-      },
+        "새로 만든 원입니다. 여기서부터는 위의 버튼이 한 화면에 보이지 않을테니 오른쪽 상단에 붙어있는 버튼을 사용해보세요. 똑같이 작동합니다.",
+      text2:
+        "기존의 원과 다른 위치에 있기 때문에 당연히 x값과 y값 역시 다릅니다. 코드는 아래와 같이 수정했습니다.",
+      code1: `useEffect(() => {
+        setTargetPosition();
+}, [position]);`,
+      text3:
+        "기존 코드와 다른 점은 deps array에 position을 넣어 주었다는 것입니다. 여기서 position이 무엇인지 기억나지 않는다면 2번 문단을 다시 읽어보세요. 누군가 버튼을 누르는 순간 setPosition이 실행되면서 position state의 값을 변경합니다. 그러면 useEffect는 state가 변경되었음을 감지하고 setTargetPosition 함수를 실행시킵니다. 따라서 이제 우리 웹페이지는 원의 위치 변경을 파악할 수 있게 되었습니다. 기존의 원과 비교해보세요.",
     },
     paragrah05: {
-      title: "5. 마지막 문제가 이상합니다.",
+      title: "5. 그러면 useMemo는?",
       text1:
-        "다 맞히셨나요? 마지막 5번은 좀 이상한 것 같다는 생각이 들었다면 맞습니다. componentWillUnMount는 여태까지 등장한 적 없는 내용입니다. 그래서 이 부분을 이제부터 하려고 합니다.",
+        "그렇다면 useEffect로도 충분한데 useMemo는 언제 사용되는 걸까요? 그 전에, useMemo는 무엇일까요?",
       text2:
         "componentWillUnMount는 componentDidMount, componentDidUpdate와 같이 컴포넌트의 라이프 사이클과 연관된 기능입니다. componentDidMount가 컴포넌트가 실행되는 시점에 시작되고(엄밀히 말하면 실행되는 시점에 진행되는 과정 중 가장 마지막이지만), componentDidUpdate가 컴포넌트의 변화를 감지해 필요한 경우 리렌더링을 해준다면 componentWillUnMount는 컴포넌트 라이프 사이클의 가장 마지막에 위치합니다. 예를 들어 부모 컴포넌트가 자식 컴포넌트를 어떤 이유로 삭제하는 경우, 소멸 직전에 작동하는 부분이라고 할 수 있습니다.",
     },

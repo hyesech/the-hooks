@@ -24,11 +24,11 @@ const Label = styled.div`
   padding: 1rem;
   z-index: 999;
   right: 2rem;
-  width: 5rem;
+  width: auto;
   height: 5rem;
   border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0);
 
-  background-color: red;
   color: white;
   text-align: center;
   font-weight: bold;
@@ -107,9 +107,11 @@ const Span = styled.span`
 
 function UseMemo() {
   const target = useRef();
+  const sphere = useRef();
 
   const [position, setPosition] = useState("center");
   const [targetXY, setTargetXY] = useState({ x: 0, y: 0 });
+  const [sphereXY, setSphereXY] = useState({ x: 0, y: 0 });
 
   // TARGET 중간 위치에서 시작
   // 왼쪽으로 보내기
@@ -128,6 +130,7 @@ function UseMemo() {
     console.log("toRight");
   };
 
+  // 기존 TARGET 위치
   const setTargetPosition = () => {
     setTargetXY({
       x: target.current.offsetLeft + 80,
@@ -140,10 +143,25 @@ function UseMemo() {
     setTargetPosition();
   }, []);
 
+  // 스피어 위치: 정상작동해야 함
+  const setSherePosition = () => {
+    setSphereXY({
+      x: sphere.current.offsetLeft + 80,
+      y: sphere.current.offsetTop + 30,
+    });
+    console.log("setSpherePosition");
+  };
+
+  useEffect(() => {
+    setSherePosition();
+  }, [position]);
+
   return (
     <Container>
       <Label>
-        x:{targetXY.x} y:{targetXY.y}
+        <Span onClick={toLeft}>L</Span>
+        <Span onClick={toMiddle}>M</Span>
+        <Span onClick={toRight}>R</Span>
       </Label>
       <ArticleTitle>
         <ArticleTitleWrapper>
@@ -165,7 +183,9 @@ function UseMemo() {
           <Paragraph>{useMemoData.contents.paragraph01.text1}</Paragraph>
           <Paragraph>
             <LabelWrapper position={`${position}`}>
-              <LabelXL>TARGET</LabelXL>
+              <LabelXL>
+                x:{targetXY.x} y:{targetXY.y}
+              </LabelXL>
             </LabelWrapper>
           </Paragraph>
           <Paragraph>{useMemoData.contents.paragraph01.text2}</Paragraph>
@@ -214,49 +234,23 @@ function UseMemo() {
         <TextWrapper>
           <SubTitle darkText={useMemoData.darkText}>
             {useMemoData.contents.paragrah04.title}
-            <ButtonPart foo="O/X QUIZ" answer="눌러도 소용 없어요." />
           </SubTitle>
           <Paragraph>{useMemoData.contents.paragrah04.text1}</Paragraph>
           <Paragraph>
-            {useMemoData.contents.paragrah04.quiz1.qtext1}
-            <ButtonPart
-              foo="______"
-              answer={useMemoData.contents.paragrah04.quiz1.blank1}
-            />
-            {useMemoData.contents.paragrah04.quiz1.qtext2}
+            <LabelWrapper position={`${position}`}>
+              <LabelXL ref={sphere}>
+                x:{sphereXY.x} y:{sphereXY.y}
+              </LabelXL>
+            </LabelWrapper>
           </Paragraph>
+          <Paragraph>{useMemoData.contents.paragrah04.text2}</Paragraph>
           <Paragraph>
-            {useMemoData.contents.paragrah04.quiz2.qtext1}
-            <ButtonPart
-              foo="______"
-              answer={useMemoData.contents.paragrah04.quiz2.blank1}
+            <DefaultCodeBlock
+              text={useMemoData.contents.paragrah04.code1}
+              showLineNumbers={false}
             />
-            {useMemoData.contents.paragrah04.quiz2.qtext2}
           </Paragraph>
-          <Paragraph>
-            {useMemoData.contents.paragrah04.quiz3.qtext1}
-            <ButtonPart
-              foo="______"
-              answer={useMemoData.contents.paragrah04.quiz3.blank1}
-            />
-            {useMemoData.contents.paragrah04.quiz3.qtext2}
-          </Paragraph>
-          <Paragraph>
-            {useMemoData.contents.paragrah04.quiz4.qtext1}
-            <ButtonPart
-              foo="______"
-              answer={useMemoData.contents.paragrah04.quiz4.blank1}
-            />
-            {useMemoData.contents.paragrah04.quiz4.qtext2}
-          </Paragraph>
-          <Paragraph>
-            {useMemoData.contents.paragrah04.quiz5.qtext1}
-            <ButtonPart
-              foo="______"
-              answer={useMemoData.contents.paragrah04.quiz5.blank1}
-            />
-            {useMemoData.contents.paragrah04.quiz5.qtext2}
-          </Paragraph>
+          <Paragraph>{useMemoData.contents.paragrah04.text3}</Paragraph>
         </TextWrapper>
 
         {/* 5 */}
