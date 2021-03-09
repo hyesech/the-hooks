@@ -28,3 +28,9 @@ useMemo, useCallback
 - [ ] useMemo를 이용해 useRef 페이지 개선한 내용 작성
 - [ ] 개선이 필요한 이유를 포함한 useMemo, useCallback 사용 이유 작성
 - [ ] 
+
+
+## 기타 수정이 필요한 부분
+- [ ] footer: 상업용 웹 사이트를 디자인하려고 더미 데이터를 넣었으나, 웹 페이지의 성격에 맞게 정리
+- [ ] css: 폴더마다 같은 css가 in js의 형태로 반복되는 부분 개선 필요
+- [ ] rerendering issue: 전반적으로 hook의 특성, 미숙한 hook 사용 등으로 쓸데없이 페이지가 리렌더링 되는 현상 잡아내고, 해결
