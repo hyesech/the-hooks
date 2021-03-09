@@ -51,12 +51,12 @@ const HooksList = () => {
             </Text>
           </HookCard>
         </Link>
-        <Link to="/">
+        <Link to="/usememo">
           <HookCard>
             <HookIcon src={Number03} onMouseOver={changeNumberColor} />
             <Text>
-              <HookH2>useTitle</HookH2>
-              <HookP>Title?</HookP>
+              <HookH2>useMemo</HookH2>
+              <HookP>useCallback</HookP>
             </Text>
           </HookCard>
         </Link>

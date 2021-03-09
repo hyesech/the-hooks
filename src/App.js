@@ -9,6 +9,7 @@ import HooksPage from "./Pages/HooksPage";
 import UseTitlePage from "./Pages/UseTitlePage";
 import HyesechPage from "./Pages/HyesechPage";
 import UseRefPage from "./Pages/UseRefPage";
+import UseMemoPage from "./Pages/UseMemoPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/hooks" component={HooksPage} exact />
         <Route path="/usetitle" component={UseTitlePage} exact />
         <Route path="/useref" component={UseRefPage} exact />
+        <Route path="/usememo" component={UseMemoPage} exact />
 
         {/* <Route path="/usetitle" component={UseTitlePage} exact /> */}
         {/* <Route path="/signin" component={SigninPage} exact />

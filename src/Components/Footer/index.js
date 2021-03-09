@@ -41,17 +41,12 @@ const Footer = () => {
                 <FooterLink to="/">Investors</FooterLink>
                 <FooterLink to="/">Terms of Services</FooterLink>
               </FooterLinkItems>
-              <FooterLinkItems>
-                <FooterLinkTitle>Hooks</FooterLinkTitle>
-                <FooterLink to="/">useTitle</FooterLink>
-                <FooterLink to="/">useClick</FooterLink>
-              </FooterLinkItems>
             </FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>Hooks</FooterLinkTitle>
-              <FooterLink to="/">06</FooterLink>
-              <FooterLink to="/">07</FooterLink>
-              <FooterLink to="/">08</FooterLink>
+              <FooterLink to="/usetitle">useTitle</FooterLink>
+              <FooterLink to="/useref">useRef</FooterLink>
+              <FooterLink to="/usememo">useMemo</FooterLink>
               <FooterLink to="/">09</FooterLink>
             </FooterLinkItems>
             <FooterLinksWrapper>
