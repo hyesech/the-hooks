@@ -46,7 +46,7 @@ const Footer = () => {
               <FooterLinkTitle>Hooks</FooterLinkTitle>
               <FooterLink to="/usetitle">useTitle</FooterLink>
               <FooterLink to="/useref">useRef</FooterLink>
-              <FooterLink to="/usememo">useMemo</FooterLink>
+              <FooterLink to="/useeffect">useEffect</FooterLink>
               <FooterLink to="/">09</FooterLink>
             </FooterLinkItems>
             <FooterLinksWrapper>

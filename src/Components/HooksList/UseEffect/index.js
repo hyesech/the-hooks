@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import Router from "react-router-dom";
 import styled from "styled-components";
-import { useMemoData } from "./UseMemoData";
+import { useEffectData } from "./UseEffectData";
 import { DefaultCodeBlock } from "../../CodeBlock";
 import {
   Container,
@@ -13,7 +12,7 @@ import {
   Heading,
   SubTitle,
   Paragraph,
-} from "./UseMemoElements";
+} from "./UseEffectElements";
 import ButtonPart from "../../Parts/ButtonPart";
 
 const Label = styled.div`
@@ -105,7 +104,7 @@ const Span = styled.span`
   }
 `;
 
-function UseMemo() {
+function UseEffect() {
   const target = useRef();
   const sphere = useRef();
 
@@ -165,22 +164,22 @@ function UseMemo() {
       </Label>
       <ArticleTitle>
         <ArticleTitleWrapper>
-          <TopLine>{useMemoData.topLine}</TopLine>
-          <Heading ref={target} lightText={useMemoData.lightText}>
-            <ButtonPart foo="useRef" answer="useMemo" />
+          <TopLine>{useEffectData.topLine}</TopLine>
+          <Heading ref={target} lightText={useEffectData.lightText}>
+            <ButtonPart foo="useRef" answer="useEffect RECAP" />
           </Heading>
-          <SubTitle>{useMemoData.description}</SubTitle>
+          <SubTitle>{useEffectData.description}</SubTitle>
         </ArticleTitleWrapper>
       </ArticleTitle>
 
       <ArticleWrapper>
         {/* 1*/}
         <TextWrapper>
-          <SubTitle darkText={useMemoData.darkText}>
-            {useMemoData.contents.paragraph01.title}
+          <SubTitle darkText={useEffectData.darkText}>
+            {useEffectData.contents.paragraph01.title}
           </SubTitle>
 
-          <Paragraph>{useMemoData.contents.paragraph01.text1}</Paragraph>
+          <Paragraph>{useEffectData.contents.paragraph01.text1}</Paragraph>
           <Paragraph>
             <LabelWrapper position={`${position}`}>
               <LabelXL>
@@ -188,14 +187,14 @@ function UseMemo() {
               </LabelXL>
             </LabelWrapper>
           </Paragraph>
-          <Paragraph>{useMemoData.contents.paragraph01.text2}</Paragraph>
-          <Paragraph>{useMemoData.contents.paragraph01.text3}</Paragraph>
+          <Paragraph>{useEffectData.contents.paragraph01.text2}</Paragraph>
+          <Paragraph>{useEffectData.contents.paragraph01.text3}</Paragraph>
         </TextWrapper>
 
         {/* 2 */}
         <TextWrapper>
-          <SubTitle darkText={useMemoData.darkText}>
-            {useMemoData.contents.paragrah02.title}
+          <SubTitle darkText={useEffectData.darkText}>
+            {useEffectData.contents.paragrah02.title}
           </SubTitle>
           <Paragraph>
             <PadWrapper>
@@ -204,38 +203,38 @@ function UseMemo() {
               <Span onClick={toRight}>R</Span>
             </PadWrapper>
           </Paragraph>
-          <Paragraph>{useMemoData.contents.paragrah02.text1}</Paragraph>
+          <Paragraph>{useEffectData.contents.paragrah02.text1}</Paragraph>
           <Paragraph>
             <DefaultCodeBlock
-              text={useMemoData.contents.paragrah02.code1}
+              text={useEffectData.contents.paragrah02.code1}
               showLineNumbers={false}
             />
           </Paragraph>
-          <Paragraph>{useMemoData.contents.paragrah02.text2}</Paragraph>
+          <Paragraph>{useEffectData.contents.paragrah02.text2}</Paragraph>
         </TextWrapper>
 
         {/* 3 */}
         <TextWrapper>
-          <SubTitle darkText={useMemoData.darkText}>
-            {useMemoData.contents.paragrah03.title}
+          <SubTitle darkText={useEffectData.darkText}>
+            {useEffectData.contents.paragrah03.title}
           </SubTitle>
-          <Paragraph>{useMemoData.contents.paragrah03.text1}</Paragraph>
+          <Paragraph>{useEffectData.contents.paragrah03.text1}</Paragraph>
 
           <Paragraph>
             <DefaultCodeBlock
-              text={useMemoData.contents.paragrah03.code1}
+              text={useEffectData.contents.paragrah03.code1}
               showLineNumbers={false}
             />
           </Paragraph>
-          <Paragraph>{useMemoData.contents.paragrah03.text2}</Paragraph>
+          <Paragraph>{useEffectData.contents.paragrah03.text2}</Paragraph>
         </TextWrapper>
 
         {/* 4 */}
         <TextWrapper>
-          <SubTitle darkText={useMemoData.darkText}>
-            {useMemoData.contents.paragrah04.title}
+          <SubTitle darkText={useEffectData.darkText}>
+            {useEffectData.contents.paragrah04.title}
           </SubTitle>
-          <Paragraph>{useMemoData.contents.paragrah04.text1}</Paragraph>
+          <Paragraph>{useEffectData.contents.paragrah04.text1}</Paragraph>
           <Paragraph>
             <LabelWrapper position={`${position}`}>
               <LabelXL ref={sphere}>
@@ -243,83 +242,14 @@ function UseMemo() {
               </LabelXL>
             </LabelWrapper>
           </Paragraph>
-          <Paragraph>{useMemoData.contents.paragrah04.text2}</Paragraph>
+          <Paragraph>{useEffectData.contents.paragrah04.text2}</Paragraph>
           <Paragraph>
             <DefaultCodeBlock
-              text={useMemoData.contents.paragrah04.code1}
+              text={useEffectData.contents.paragrah04.code1}
               showLineNumbers={false}
             />
           </Paragraph>
-          <Paragraph>{useMemoData.contents.paragrah04.text3}</Paragraph>
-        </TextWrapper>
-
-        {/* 5 */}
-        <TextWrapper>
-          <SubTitle darkText={useMemoData.darkText}>
-            {useMemoData.contents.paragrah05.title}
-          </SubTitle>
-          <Paragraph>{useMemoData.contents.paragrah05.text1}</Paragraph>
-          <Paragraph>{useMemoData.contents.paragrah05.text2}</Paragraph>
-        </TextWrapper>
-
-        {/* 6 */}
-        <TextWrapper>
-          <SubTitle darkText={useMemoData.darkText}>
-            {useMemoData.contents.paragrah06.title}
-          </SubTitle>
-
-          <Paragraph>{useMemoData.contents.paragrah06.text1}</Paragraph>
-          <Paragraph>
-            <DefaultCodeBlock
-              text={useMemoData.contents.paragrah06.code1}
-              showLineNumbers={false}
-            />
-          </Paragraph>
-          <Paragraph>{useMemoData.contents.paragrah06.text2}</Paragraph>
-        </TextWrapper>
-
-        {/* 7 */}
-        <TextWrapper>
-          <SubTitle darkText={useMemoData.darkText}>
-            {useMemoData.contents.paragrah07.title}
-          </SubTitle>
-          <Paragraph>{useMemoData.contents.paragrah07.text1}</Paragraph>
-          <Paragraph>{useMemoData.contents.paragrah07.text2}</Paragraph>
-          <ButtonPart
-            foo="________________________"
-            answer="웹 사이트가 작동하지 않았습니다..."
-          />
-        </TextWrapper>
-
-        {/* 8 */}
-        <TextWrapper>
-          <SubTitle darkText={useMemoData.darkText}>
-            {useMemoData.contents.paragrah08.title}
-          </SubTitle>
-          <Paragraph>{useMemoData.contents.paragrah08.text1}</Paragraph>
-          <Paragraph>
-            <DefaultCodeBlock
-              text={useMemoData.contents.paragrah08.code1}
-              showLineNumbers={false}
-            />
-          </Paragraph>
-          <Paragraph>{useMemoData.contents.paragrah08.text2}</Paragraph>
-        </TextWrapper>
-
-        {/* 9 */}
-        <TextWrapper>
-          <SubTitle darkText={useMemoData.darkText}>
-            {useMemoData.contents.paragrah09.title}
-          </SubTitle>
-          <Paragraph>{useMemoData.contents.paragrah09.text1}</Paragraph>
-          <Paragraph>
-            <DefaultCodeBlock
-              text={useMemoData.contents.paragrah09.code1}
-              showLineNumbers={false}
-            />
-          </Paragraph>
-          <Paragraph>{useMemoData.contents.paragrah09.text2}</Paragraph>
-          <Paragraph>{useMemoData.contents.paragrah09.text3}</Paragraph>
+          <Paragraph>{useEffectData.contents.paragrah04.text3}</Paragraph>
         </TextWrapper>
       </ArticleWrapper>
 
@@ -341,4 +271,4 @@ function UseMemo() {
   );
 }
 
-export default UseMemo;
+export default UseEffect;

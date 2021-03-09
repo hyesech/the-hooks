@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaRegIdBadge } from "react-icons/fa";
 import styled from "styled-components";
 
 const Button = styled.button`
