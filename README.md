@@ -6,8 +6,10 @@ Website for learning react hook.
 main branch
 여기로 merge된 경우 gh-pages에 배포
 현재까지 배포된 페이지는 useTitle
-추후 업데이트 예정 페이지(배포x)
-- [x] useRef
+추후 업데이트 예정 페이지(x는 현재 배포된 페이지)
+- [x] useTitle
+- [ ] useRef
+- [ ] useEffect RECAP
 - [ ] useMemo
 - [ ] useCallback
 
